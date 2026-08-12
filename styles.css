@@ -1,0 +1,128 @@
+
+:root{
+  --paper:#f6f0df;
+  --paper-deep:#eee4c9;
+  --ink:#253b34;
+  --gold:#9b7330;
+  --gold-dark:#76541f;
+  --wine:#5d2630;
+  --cream:#fffaf0;
+  --line:#c7ad78;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height:1.65;
+}
+a{color:inherit}
+.site-header{
+  position:sticky;top:0;z-index:20;
+  background:rgba(246,240,223,.96);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(8px);
+}
+.nav{
+  max-width:1120px;margin:auto;padding:14px 22px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.brand{
+  text-decoration:none;text-transform:uppercase;letter-spacing:.14em;
+  font-size:.86rem;color:var(--gold-dark);font-weight:bold;
+}
+.nav-links{display:flex;gap:22px}
+.nav-links a{text-decoration:none;font-size:.95rem}
+.nav-links a:hover{color:var(--wine)}
+.hero{
+  max-width:1120px;margin:auto;padding:70px 22px 45px;
+  display:grid;grid-template-columns: .9fr 1.1fr;gap:65px;align-items:center;
+}
+.hero-cover{display:flex;justify-content:center}
+.hero-cover img{
+  width:min(100%,370px);border:1px solid #b59655;
+  box-shadow:0 18px 35px rgba(70,48,15,.18);
+}
+.eyebrow{
+  text-transform:uppercase;letter-spacing:.24em;font-size:.82rem;
+  color:var(--gold-dark);margin:0 0 12px;
+}
+h1{
+  font-size:clamp(3rem,7vw,5.7rem);line-height:.96;
+  font-weight:normal;color:var(--gold-dark);margin:0 0 18px;
+  letter-spacing:.02em;
+}
+.subtitle{font-size:1.35rem;margin:0 0 24px}
+.byline{font-size:1.15rem;letter-spacing:.12em;text-transform:uppercase}
+.divider{height:1px;background:var(--line);max-width:650px;margin:28px 0}
+.event-card{
+  background:var(--cream);border:1px solid var(--line);
+  padding:24px 28px;box-shadow:0 10px 30px rgba(80,55,20,.07);
+}
+.event-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.event-label{text-transform:uppercase;letter-spacing:.14em;font-size:.75rem;color:var(--gold-dark)}
+.event-value{font-size:1.25rem}
+.button{
+  display:inline-block;padding:12px 20px;margin-top:18px;
+  text-decoration:none;text-transform:uppercase;letter-spacing:.12em;
+  font-size:.82rem;border:1px solid var(--gold-dark);
+  background:var(--gold-dark);color:#fffdf4;
+}
+.button.secondary{background:transparent;color:var(--gold-dark);margin-left:8px}
+.section{padding:65px 22px}
+.section.alt{background:var(--paper-deep)}
+.container{max-width:1000px;margin:auto}
+.section-title{text-align:center;margin:0 0 35px;color:var(--wine);font-size:2rem;font-weight:normal}
+.center{text-align:center}
+.quote{
+  max-width:760px;margin:0 auto;font-size:1.45rem;text-align:center;
+  font-style:italic;color:var(--wine);
+}
+.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.feature{
+  text-align:center;padding:25px 20px;border-top:1px solid var(--line);
+}
+.feature h3{margin:0 0 8px;color:var(--gold-dark);font-size:1.2rem}
+.location-preview{
+  display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;
+}
+.location-preview img{width:100%;display:block;border:1px solid var(--line)}
+.location-box{font-size:1.05rem}
+footer{
+  padding:35px 22px;text-align:center;border-top:1px solid var(--line);
+  font-size:.9rem;color:#5f584b;
+}
+.page-hero{
+  padding:70px 22px 45px;text-align:center;
+  background:linear-gradient(rgba(246,240,223,.92),rgba(246,240,223,.92)), url("assets/castletown-sketch.jpg") center bottom/cover;
+}
+.page-hero h1{font-size:clamp(2.7rem,6vw,4.8rem)}
+.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.info-card{
+  background:var(--cream);border:1px solid var(--line);padding:28px;
+}
+.info-card h2{color:var(--wine);font-weight:normal;margin-top:0}
+.info-card strong{color:var(--gold-dark)}
+.notice{
+  padding:16px 18px;border-left:4px solid var(--gold);
+  background:rgba(255,250,240,.7);margin-top:18px;
+}
+.map-wrap{margin-top:30px;border:1px solid var(--line);background:#e8dfc8}
+.map-wrap iframe{display:block;width:100%;height:420px;border:0}
+.small{font-size:.9rem;color:#645d50}
+@media(max-width:800px){
+  .hero,.location-preview{grid-template-columns:1fr;gap:35px}
+  .hero{padding-top:45px}
+  .features,.info-grid{grid-template-columns:1fr}
+  .nav{align-items:flex-start}
+  .nav-links{gap:12px;font-size:.9rem}
+  .button.secondary{margin-left:0}
+}
+@media(max-width:520px){
+  .nav{display:block}
+  .nav-links{margin-top:8px}
+  .event-grid{grid-template-columns:1fr}
+  h1{font-size:3rem}
+}
